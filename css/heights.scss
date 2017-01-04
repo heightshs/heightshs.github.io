@@ -1,0 +1,59 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+@import 'bourbon/bourbon';
+@import 'shadow';
+
+//Thanks Google: https://material.google.com/style/color.html#color-color-palette
+$background-color: #800A1E;
+
+$text-normal: rgb(50,50,50);
+$text-grey: rgb(100,100,100);
+$text-white: rgb(245,245,245);
+
+//Fonts stolen from Github CSS because they're adaptive and clever
+$github-fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$secondary-font: 'Roboto', sans-serif;
+
+body {
+    overflow-x: hidden;
+    color: darken($text-grey, 10%);
+    font-family: $github-fonts;
+    font-weight: normal;
+    background: $text-white;
+}
+
+.container.content {
+    padding-bottom: 20px;
+}
+
+h1.hero, h3.feature, h5.feature {
+    font-weight: 700;
+}
+h1.hero {
+    font-size: 3rem;
+}
+h3.feature {
+    font-size: 2.3rem;
+    margin-top: 3rem;
+    margin-bottom: 0;
+}
+h5.feature {
+    font-size: 1.7rem;
+}
+
+
+a:hover, a:active {
+    text-decoration: underline;
+}
+
+a.btn {
+    text-decoration: none;
+}
+
+img {
+    border-radius: 2px;
+    @include z-depth-1();
+}
