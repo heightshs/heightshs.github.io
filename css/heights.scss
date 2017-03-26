@@ -72,6 +72,7 @@ figure.highlight pre {
     padding: 24px;
     margin: .5rem 0 1rem 0;
     border-radius: 2px;
+    background: #fff;
     @include z-depth-1();
 }
 @import 'post';
